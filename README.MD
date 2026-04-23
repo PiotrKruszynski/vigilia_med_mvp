@@ -1,70 +1,37 @@
 # Vigilia MED MVP
 
-## Project Description
+Repo zawiera backendowe API w katalogu `api`, przygotowane jako szablon Pythona oparty o `uv`.
 
-Vigilia MED MVP is a medical shifts application consisting of a React-based frontend and a FastAPI-built backend. The application enables [short description of functionality, e.g., patient management, health monitoring, etc. - adjust as needed].
+## Wymagania
 
-## Prerequisites
+- `uv`
+- Python `3.14` zarządzany przez `uv`
 
-- Node.js (version 16 or newer)
-- Python (version 3.8 or newer)
-- pip (Python package manager)
+## Szybki start
 
-## Installation
-
-### Backend (FastAPI)
-
-1. Navigate to the `api` folder:
-   ```
+1. Przejdź do katalogu `api`:
+   ```bash
    cd api
    ```
-
-2. Install dependencies:
+2. Utwórz środowisko i zainstaluj zależności:
+   ```bash
+   uv sync --dev --python 3.14
    ```
-   pip install -r requirements.txt
+3. Uruchom aplikację:
+   ```bash
+   uv run app
    ```
-
-### Frontend (React)
-
-1. Navigate to the `pwa` folder:
-   ```
-   cd pwa
-   ```
-
-2. Install dependencies:
-   ```
-   npm install
+4. Uruchom testy:
+   ```bash
+   uv run pytest
    ```
 
-## Running the Application
+## Struktura
 
-### Backend
+- `api/` - backendowy szablon aplikacji Python
 
-In the `api` folder, start the server:
-```
-uvicorn main:app --reload
-```
+## Przydatne komendy
 
-The backend will be available at `http://localhost:8000`.
-
-### Frontend
-
-In the `pwa` folder, start the application:
-```
-npm start
-```
-
-The frontend will be available at `http://localhost:3000`.
-
-## Project Structure
-
-- `api/` - FastAPI backend code
-- `pwa/` - React frontend code (Progressive Web App)
-
-## API Documentation
-
-After starting the backend, API documentation is available at `http://localhost:8000/docs` (Swagger UI).
-
-## License
-
-[Specify license, e.g., MIT]
+- `uv run python -m app`
+- `uv run ruff check .`
+- `uv run ty check`

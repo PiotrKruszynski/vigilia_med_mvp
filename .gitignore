@@ -1,0 +1,13 @@
+.DS_Store
+
+# Python API local environment and generated files
+api/.venv/
+api/.coverage
+api/.coverage.*
+api/.pytest_cache/
+api/.ruff_cache/
+api/.tox/
+api/coverage.xml
+api/htmlcov/
+api/**/__pycache__/
+api/**/*.pyc
